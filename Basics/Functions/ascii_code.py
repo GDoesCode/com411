@@ -5,6 +5,7 @@ while not complete:
     if len(character) == 1:
         ascii_char = ord(character)
         print(f"The ASCII code for {character} is {ascii_char}")
+        complete = True
     else:
         print("Error: character not detected")
 print("Program Ended!")
