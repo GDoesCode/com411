@@ -32,13 +32,13 @@ def repeat():
 
 word = str(input("Please enter a word:\n"))
 while not complete:
-    option = input("Please choose an option:\n"  #Want int
-                       "1) Display in a Box\n"  # display the word in an ascii art box
-                       "2) Display Lower-case\n"  # display the word in lower-case e.g. hello
-                       "3) Display Upper-case\n"  # display the word in upper-case e.g. HELLO
-                       "4) Display Mirrored\n"  # display the word with its mirrored word e.g. Hello | olleH
-                       "5) Repeat\n")  # ask the user how many times to display the word and then display the word that
-                                        # many times alternating between upper-case and lower-case
+    option = input("Please choose an option:\n"  # want int
+                   "1) Display in a Box\n"  # display the word in an ascii art box
+                   "2) Display Lower-case\n"  # display the word in lower-case e.g. hello
+                   "3) Display Upper-case\n"  # display the word in upper-case e.g. HELLO
+                   "4) Display Mirrored\n"  # display the word with its mirrored word e.g. Hello | olleH
+                   "5) Repeat\n")  # ask the user how many times to display the word and then display the word that
+                                   # many times alternating between upper-case and lower-case
     if option == "1":
         display_in_a_box(word)
         complete = True
