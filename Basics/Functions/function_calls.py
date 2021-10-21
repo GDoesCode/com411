@@ -1,10 +1,10 @@
 complete = False
 
+
 def display_in_a_box(word):
     for i in range(len(word) + 2):
         print("-", end="")
-    print()
-    print(f"|{word}|")
+    print(f"\n|{word}|")
     for i in range(len(word) + 2):
         print("-", end="")
 
