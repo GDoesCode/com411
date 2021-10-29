@@ -1,10 +1,6 @@
 def directions():
-    directions = []
-    directions.append("Move Forward")
-    directions.append("Move Backward")
-    directions.append("Turn Left")
-    directions.append("Turn Right")
-    return directions
+    direction = ["Move Forward", "Move Backward", "Turn Left", "Turn Right"]
+    return direction
 
 
 def run():
