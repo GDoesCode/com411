@@ -5,11 +5,11 @@ fig, ax = plt.subplots()
 
 
 def animate(frame):
-    global ax
     print(f"Frame No.{frame}")
 
 
 def run():
+    global fig
     anim = animation.FuncAnimation(fig,
                                    animate,
                                    frames=10,
