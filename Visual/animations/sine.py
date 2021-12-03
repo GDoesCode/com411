@@ -10,7 +10,6 @@ def animate(frame):
     ax.set_xlim(0, 720)
     ax.set_ylim(-1, 1)
     x = range(0, frame)
-    y = []
     y = [math.sin(math.radians(degrees)) for degrees in x]
     ax.plot(x, y)
 
