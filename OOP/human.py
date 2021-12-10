@@ -1,12 +1,17 @@
 class Human:
-    # region Class (constant)
+    # region Class (constant) attributes
     MAX_ENERGY = 100
+
+    # end region
 
     # region Initialiser
     def __init__(self, name="Human", age=0):
+        # region instance attributes
         self.name = name
         self.age = age
         self.energy = Human.MAX_ENERGY
+
+        # end region
 
     # endregion
 
