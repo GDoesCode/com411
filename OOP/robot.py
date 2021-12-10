@@ -19,6 +19,21 @@ class Robot:
     def display(self):
         print(f"I am {self.name}")
 
+    def grow(self):
+        self.age += 1
+
+    def eat(self, amount):
+        if (self.energy + amount) <= Robot.MAX_ENERGY:
+            self.energy += amount
+        else:
+            self.energy = Robot.MAX_ENERGY
+
+    def move(self, distance):
+        if (self.energy - distance) <= 0:
+            self.energy = 0
+        else:
+            self.energy -= distance
+
     # endregion
 
     # region Magic methods
@@ -36,3 +51,11 @@ if __name__ == "__main__":
     robot.display()
     print(robot.__repr__())
     print(robot.__str__())
+    robot.eat(50)
+    print(robot.energy)
+    robot.eat(100)
+    print(robot.energy)
+    robot.move(20)
+    print(robot.energy)
+    robot.move(100)
+    print(robot.energy)
