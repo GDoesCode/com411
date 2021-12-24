@@ -20,7 +20,8 @@ def display_menu():
                                 "[2] Display the number of passengers that survived\n"
                                 "[3] Display the number of passengers per gender\n"
                                 "[4] Display the number of passengers per age group\n"
-                                "[5] Display the number of survivors per age group\n"))
+                                "[5] Display the number of survivors per age group\n"
+                                "[6] Exit\n"))
     return selected_option
 
 
@@ -103,23 +104,28 @@ def display_survivors_per_age_group():
 
 
 def run():
+    repeat = True
     load_data("titanic.csv")
     num_records = len(records)
     print(f"Successfully loaded {num_records} records.")
-    selected_option = display_menu()
-    print(f"You have selected option: {selected_option}")
-    if selected_option == 1:
-        display_passenger_names()
-    elif selected_option == 2:
-        display_num_survivors()
-    elif selected_option == 3:
-        display_passengers_per_gender()
-    elif selected_option == 4:
-        display_passengers_per_age_group()
-    elif selected_option == 5:
-        display_survivors_per_age_group()
-    else:
-        print("Error! Option not recognised!")
+    while repeat:
+        selected_option = display_menu()
+        print(f"You have selected option: {selected_option}")
+        if selected_option == 1:
+            display_passenger_names()
+        elif selected_option == 2:
+            display_num_survivors()
+        elif selected_option == 3:
+            display_passengers_per_gender()
+        elif selected_option == 4:
+            display_passengers_per_age_group()
+        elif selected_option == 5:
+            display_survivors_per_age_group()
+        elif selected_option == 6:
+            repeat = False
+            print("Good bye!")
+        else:
+            print("Error! Option not recognised!")
 
 
 if __name__ == "__main__":
