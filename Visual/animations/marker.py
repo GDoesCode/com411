@@ -17,7 +17,7 @@ def run():
     some_animation = animation.FuncAnimation(fig,
                                              animate,
                                              frames=10,
-                                             interval=1000)
+                                             interval=1000`)
     plt.show()
 
 
