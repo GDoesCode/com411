@@ -123,7 +123,7 @@ def run():
             display_survivors_per_age_group()
         elif selected_option == 6:
             repeat = False
-            print("Good bye!")
+            print("\nGood bye!")
         else:
             print("Error! Option not recognised!")
 
